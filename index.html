@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title> Test Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+      .emptyMessage {
+        font-weight: bold;
+        color: red;
+        font-size: 1.2em;
+      }
+      li {
+        margin-bottom: 7px;
+        font-size: 1.2em;
+      }
+      li > button {
+        margin-left: 6px;
+      }
+      button > span {
+        color: green;
+      }
+    </style>
+  </head>
+<body ng-app="taskListCheckOff">
+  <div class="container">
+  <h1>V3 Subscriber - Marketing - Market Now</h1>
+
+  <div class="row">
+
+    <!-- To Buy List -->
+    <div class="col-md-6" ng-controller='ToDoController as do'>
+     <h2>To Do:</h2>
+     <ul>
+       <li ng-repeat="item in do.items">{{item.quantity}} {{ item.name }}<button class="btn btn-default" ng-click="do.doItems($index,item.name,item.quantity)"><span class="glyphicon glyphicon-ok"></span> done</button></li>
+
+     </ul>
+     <div class="emptyMessage" ng-if="do.items.length==0">Everything is done!</div>
+    </div>
+
+    <!-- Already done List -->
+    <div class="col-md-6" ng-controller="DoneController as done">
+     <h2>Completed:</h2>
+     <ul>
+       <li ng-repeat="item in done.items" ng-if="item.name">{{item.quantity}} {{ item.name }}</li>
+     </ul>
+     <div class="emptyMessage" ng-if="done.items.length===0">Nothing done yet.</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
