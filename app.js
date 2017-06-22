@@ -71,10 +71,10 @@ function MenuSearchService($http, ApiBasePath) {
     return num;
   };
 
-  service.getMatchedMenuItems = function (searchTerm){
+  service.getResults = function (searchTerm){
     var response = $http({
       method: "GET",
-      url: (ApiBasePath + "/categories.json")
+      url: (ApiBasePath + "https://s3-us-west-2.amazonaws.com/vfs-assets/Testing/testResults/result.json")
     }).then(function successCallback(response){
       console.log("found " + searchTerm);
     var items = response.data;
@@ -91,6 +91,7 @@ function MenuSearchService($http, ApiBasePath) {
     });
      //console.log(items);
      return response;
+     console.log(response);
    };
 }
 
