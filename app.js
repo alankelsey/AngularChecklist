@@ -57,7 +57,7 @@ function TaskListCheckOffService() {
               },
               {
                 name:"Does Hoover Text Display",
-                quantity:"8"
+                quantity:""
               }
             ];
 
