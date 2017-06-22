@@ -5,7 +5,8 @@ angular.module('taskListCheckOff', [])
 .controller('ToDoController', ToDoController)
 .controller('DoneController', DoneController)
 .service('TaskListCheckOffService', TaskListCheckOffService)
-.service('MenuSearchService', MenuSearchService)
+//.service('MenuSearchService', MenuSearchService)
+//.constant('ApiBasePath', "http://davids-restaurant.herokuapp.com")
 
 ToDoController.$inject = ['TaskListCheckOffService'];
   function ToDoController(TaskListCheckOffService) {
@@ -74,7 +75,7 @@ function MenuSearchService($http, ApiBasePath) {
   service.getResults = function (searchTerm){
     var response = $http({
       method: "GET",
-      url: (ApiBasePath + "https://s3-us-west-2.amazonaws.com/vfs-assets/Testing/testResults/result.json")
+      url: ("https://s3-us-west-2.amazonaws.com/vfs-assets/Testing/testResults/result.json")
     }).then(function successCallback(response){
       console.log("found " + searchTerm);
     var items = response.data;
