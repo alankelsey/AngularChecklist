@@ -1,0 +1,74 @@
+[
+  {
+    "description": "Velma login test should login to the dashboard",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 10138
+  },
+  {
+    "description": "Velma corp admin test should check for the corp admin navigation",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 2786
+  },
+  {
+    "description": "Velma corp settings test should check for the corp settings navigation",
+    "assertions": [
+      {
+        "passed": false
+      }
+    ],
+    "duration": 2189
+  },
+  {
+    "description": "Velma settings corp admin test should check for the settings corp admin navigation",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 86
+  },
+  {
+    "description": "Velma corporate subscriber list test should check for the corporate subscriber list navigation",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 3549
+  },
+  {
+    "description": "Velma corporate transaction list test should check for the corporate transaction list navigation",
+    "assertions": [
+      {
+        "passed": false
+      }
+    ],
+    "duration": 1204
+  },
+  {
+    "description": "Velma branch list test should check for the branch list navigation",
+    "assertions": [
+      {
+        "passed": false
+      }
+    ],
+    "duration": 1208
+  },
+  {
+    "description": "Velma corporate marketing test should check for the corporate marketing navigation",
+    "assertions": [
+      {
+        "passed": true
+      }
+    ],
+    "duration": 1900
+  }
+]
